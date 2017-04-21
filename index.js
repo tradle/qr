@@ -1,9 +1,10 @@
 
 const omit = require('object.omit')
 const QR = require('qrcode')
-const { toHex } = require('@tradle/qr-schema')
+const schema = require('@tradle/qr-schema')
 
 module.exports = {
+  schema,
   toCells,
   toCanvas: function (opts, cb) {
     if (!opts.canvas) throw new Error('expected "canvas"')
@@ -30,10 +31,10 @@ function getQRCodeOpts (opts) {
   return omit(opts, ['schema', 'data'])
 }
 
-function getQRCodeData ({ schema, data }) {
+function getQRCodeData (opts) {
   return [{
     mode: 'alphanumeric',
-    data: toHex({ schema, data })
+    data: schema.toHex(opts)
   }]
 }
 
