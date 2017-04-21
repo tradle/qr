@@ -16,10 +16,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^3.19.0",
+    "husky": "^0.13.3",
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "lint": "eslint --quiet --ignore-path .gitignore .",
-    "build": "webpack"
+    "lint": "eslint --quiet index.js",
+    "build": "webpack",
+    "prepush": "npm run lint"
   }
 }
