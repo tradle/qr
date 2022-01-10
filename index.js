@@ -42,7 +42,7 @@ function matrixToCells (matrix) {
   const n = matrix.size
   const rows = new Array(n)
   for (let i = 0; i < n; i++) {
-    let row = new Array(n)
+    const row = new Array(n)
     for (let j = 0; j < n; j++) {
       row[j] = matrix.get(i, j)
     }

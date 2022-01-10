@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@tradle/qr-schema": "^3.0.4",
-    "eslint": "^3.19.0",
-    "husky": "^0.13.3"
+    "husky": "^0.13.3",
+    "standard": "^16.0.4"
   },
   "scripts": {
-    "lint": "eslint --quiet index.js",
+    "lint": "standard",
     "prepush": "npm run lint",
     "precommit": "npm run lint"
   }
