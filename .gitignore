@@ -3,3 +3,5 @@ node_modules/
 blah.png
 cmd.js
 index.html
+package-lock.json
+
